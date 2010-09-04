@@ -1,0 +1,10 @@
+body {
+  width: 200;
+  height: 80px;
+  background: transparent url(images/transparent.png);
+  font-size: 8pt;
+}
+
+ul {
+    list-style: none inside;
+}

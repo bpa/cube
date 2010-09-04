@@ -1,0 +1,77 @@
+#! /usr/bin/perl
+
+use utf8;
+use strict;
+use warnings;
+use Getopt::Long ':config' => 'posix_default';
+my $show = 0;
+binmode STDOUT, ":utf8";
+GetOptions( 's|show' => \$show ) || die "\n";
+
+my ( $review_phase, @review_group ) = map { ucfirst } @ARGV;
+my %phase;
+my %parse_funcs = (
+    descriptions => \&parse_description,
+    solutions    => \&parse_solution,
+);
+my $parse = sub { "not it\n" };
+my $file = "cfop.csv";
+open( CSV, $file ) || die "Can't open $file: $!\n";
+binmode CSV, ":utf8";
+while (<CSV>) {
+    next if /^\s*#/;
+    chomp;
+    if (/^(\w+):/) {
+        $parse = $parse_funcs{lc($1)} || sub { print "?\n" };
+        next;
+    }
+    $parse->($_);
+}
+while ( my ( $phase, $groups ) = each %phase ) {
+    next if $review_phase && $phase ne $review_phase;
+    print "Phase: $phase\n" if $show;
+    while ( my ( $group, $solutions ) = each %$groups ) {
+        next if @review_group && !grep { $group eq $_ } @review_group;
+        if ($show) {
+            show_group($group, $solutions);
+            next;
+        }
+        foreach (@{$solutions->{'moves'}}) {
+            print "\n\n";
+            print $_->[0], "\n";
+            my $x        = <STDIN>;
+            my @solution = @{$_};
+            shift @solution;
+            print join( "\n", @solution ), "\n";
+        }
+    }
+}
+
+sub parse_solution {
+    my ( $phase, $group, @moves ) = split( /,/, $_[0] );
+    push @{ $phase{$phase}{$group}{'moves'} }, \@moves;
+}
+
+sub parse_description {
+    my ( $phase, $group, $view, @display) = split( /,/, $_[0] );
+    for (@display) {
+        tr/.X/▢■/;
+    }
+    push @{ $phase{$phase}{$group}{'display'} }, @display;
+    $phase{$phase}{$group}{'view'} = $view;
+}
+
+sub show_group {
+    my ( $group, $solutions ) = @_;
+    if ( $solutions->{'view'} ) {
+        printf " %2s ", $group;
+        for ( my $i=0; $i<3; $i++) {
+            print "    " if $i;
+            print join(" ", map(substr($_,$i*3,3),@{$solutions->{'display'}})), "\n"; 
+        }
+        print "\n";
+    }
+    else {
+        print "  $group\n";
+    }
+}
