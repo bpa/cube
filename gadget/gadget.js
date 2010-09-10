@@ -1,18 +1,25 @@
 var index;
 var rows;
 
+  alert('hi');
+  document.body.style.width  = "200px";
+  document.body.style.height = "130px";
 $(document).ready(function() {
+  //document.getElementById('debug').innerHTML = 'Setup';
+  $('#debug').innerHTML = 'Setup';
   $('#data').load('cfop.html', function(){
         rows = $('#moves > tbody > tr').length;
+	document.write(rows);
         show(1)
     });
 });
 
 function show(rowid) {
     index = rowid;
+    $('#debug').innerHTML = 'Showing ' + rowid;
     var row = $('#moves > tbody > tr')[rowid];
     var arr = $('td', row);
-    $('#setup').text(arr[4].innerHTML);
+    $('#setup').innerHTML = arr[4].innerHTML;
     $('#cube').attr('src', $('img', arr[2]).attr('src'));
 }
 
