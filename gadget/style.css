@@ -1,8 +1,21 @@
 body {
-  width: 200;
-  height: 80px;
-  background: transparent url(images/transparent.png);
+  width: 130px;
+  height: 130px;
+  background: url(images/docked.png);
   font-size: 8pt;
+}
+
+#gadget {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#setup {
+  position: absolute;
+  left: 0px;
+  top: 85px;
+  padding: 5px;
 }
 
 ul {

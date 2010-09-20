@@ -13,7 +13,7 @@ function show(rowid) {
 
 function setup() {
   document.body.style.height = "130px";
-  document.body.style.width  = "200px";
+  document.body.style.width  = "130px";
   iframe = document.getElementById('data').contentWindow.document;
   moves = iframe.getElementById('moves');
   rows = $('tbody > tr', moves).length;
