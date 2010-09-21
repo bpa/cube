@@ -1,7 +1,14 @@
-body {
+#main {
   width: 130px;
   height: 130px;
-  background: url(images/docked.png);
+  background: white; x: url(images/docked.png);
+  font-size: 8pt;
+}
+
+#flyout {
+  width: 200px;
+  height: 130px;
+  background-color: white;
   font-size: 8pt;
 }
 

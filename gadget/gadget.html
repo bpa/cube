@@ -9,7 +9,7 @@
    <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
    <script src="gadget.js" type="text/javascript"></script>
 </head>
-<body>
+<body id="main">
    <div>
    <table id="gadget" class="gadget">
      <tr>
@@ -19,8 +19,8 @@
      </tr>
    </table>
    </div>
-   <div id="setup">test</div>
-   <iframe src="cfop.html" id="data" style="display: none" onLoad="setup()"></iframe>
+   <div id="setup" onClick="toggleFlyout()">test</div>
+   <iframe src="cfop.html" id="data" style="display: none"></iframe>
 </body>
 </html>
 
