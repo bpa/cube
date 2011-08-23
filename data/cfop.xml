@@ -1,0 +1,1012 @@
+<?xml version="1.0"?>
+<moves>
+  <move phase="F" group="Dd">
+    <image src="images/1.png"/>
+    <setup>F' U' F U2 F' U2 F U' R U R'</setup>
+    <solutions>
+      <solution>R U' R' d R' U2 R U2' R' U R</solution>
+      <solution>(y') R' U R d' R U2' R' U2 R U' R'</solution>
+      <solution>(y2) L U' L' d L' U2' L U2' L' U L</solution>
+      <solution>(y) L' U L d' L U2' L' U2' L U' L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Dd">
+    <image src="images/2.png"/>
+    <setup>F' U' F U R U R' U'</setup>
+    <solutions>
+      <solution>U R U' R' d' L' U L</solution>
+      <solution>(y') R' U R U R' U R U' R' U' R</solution>
+      <solution>(y2) U L U' L' d' R' U R</solution>
+      <solution>(y) d R U' R' d' L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Dd">
+    <image src="images/3.png"/>
+    <setup>R U R' U' F' U' F U</setup>
+    <solutions>
+      <solution>R U' R' U' R U' R' U R U R'</solution>
+      <solution>d' L' U L d R U' R'</solution>
+      <solution>(y') U' R' U R d' L U' L'</solution>
+      <solution>(y) U' L' U L d R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Rd">
+    <image src="images/4.png"/>
+    <setup>R2 U2 R' U' R U' R' U2 R'</setup>
+    <solutions>
+      <solution>R U2' R U R' U R U2' R2'</solution>
+      <solution>R U' R' U R U2' R' U R U' R'</solution>
+      <solution>R U2' R U R' U R U2' R2'</solution>
+      <solution>(y') R' U' R U R' U2 R U R' U' R</solution>
+      <solution>(y2) L U2' L U L' U L U2' L2</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Rd">
+    <image src="images/5.png"/>
+    <setup>F' L' U2 L F R U R'</setup>
+    <solutions>
+      <solution>R U' R' U2 (y') R' U' R U' R' U R</solution>
+      <solution>(y2) L U' L' U2 (y) R' U' R U' R' U R</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Rd">
+    <image src="images/6.png"/>
+    <setup>F' U' F U F' U' F</setup>
+    <solutions>
+      <solution>R U R' U' (x) U R' U' l</solution>
+      <solution>(y') R' U R U' R' U R</solution>
+      <solution>(y) L' U L U' L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Rd">
+    <image src="images/7.png"/>
+    <setup>R U' R' U R U' R'</setup>
+    <solutions>
+      <solution>R U R' U' R U R'</solution>
+      <solution>(y2) L U L' U' L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Fd">
+    <image src="images/8.png"/>
+    <setup>R U' R' U R U2 R' U R U' R'</setup>
+    <solutions>
+      <solution>R U R' U' R U2 R' U' R U R'</solution>
+      <solution>R U' R' U' R U R' U2 R U' R'</solution>
+      <solution>(y2) L U L' U' L U2' L' U' L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Fd">
+    <image src="images/9.png"/>
+    <setup>R U' R' F' L' U2 L F</setup>
+    <solutions>
+      <solution>R U' R' d R' U' R U' R' U' R</solution>
+      <solution>(y') R' U R U2 (y) R U R' U R U' R'</solution>
+      <solution>(y2) L U' L' U' L U' L' d L' U' L</solution>
+      <solution>(y) L' U L U2' (y') R U R' U R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Fd">
+    <image src="images/10.png"/>
+    <setup>F' U F U' F' U F</setup>
+    <solutions>
+      <solution>(y') R' U' R U R' U' R</solution>
+      <solution>(y) L' U' L U L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="Fd">
+    <image src="images/11.png"/>
+    <setup>R U R' U' R U R'</setup>
+    <solutions>
+      <solution>R U' R' U R U' R'</solution>
+      <solution>(y2) L U' L' U L U' L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/12.png"/>
+    <setup>R U' R' U R U' R' U R U' R'</setup>
+    <solutions>
+      <solution>R U R' U' R U R' U' R U R'</solution>
+      <solution>(y') R' U' R U R' U' R U R' U' R</solution>
+      <solution>(y2) L U L' U' L U L' U' L U L'</solution>
+      <solution>(y) L' U' L U L' U' L U L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/13.png"/>
+    <setup>R B' R B R' U R'</setup>
+    <solutions>
+      <solution>R U' l U' R' U l'</solution>
+      <solution>(y') R' U l' U R U' l</solution>
+      <solution>(y2) L U' r U' L' U r'</solution>
+      <solution>(y) L' U r' U L U' r</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/14.png"/>
+    <setup>F' U F U' F' U2 F</setup>
+    <solutions>
+      <solution>(y') R' U2 R U R' U' R</solution>
+      <solution>(y) L' U2' L U L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/15.png"/>
+    <setup>R2 U R' U R U2 R2 U2</setup>
+    <solutions>
+      <solution>U2 R2' U2 R' U' R U' R2'</solution>
+      <solution>(y2) U2 L2 U2 L' U' L U' L2</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/16.png"/>
+    <setup>F' U' F U F' U2' F U</setup>
+    <solutions>
+      <solution>d' L' U2' L U' L' U L</solution>
+      <solution>(y') U' R' U2 R U' R' U R</solution>
+      <solution>(y2) d' R' U2 R U' R' U R</solution>
+      <solution>(y) U' L' U2' L U' L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/17.png"/>
+    <setup>R U R' U' R U' R' U2</setup>
+    <solutions>
+      <solution>U2 R U R' U R U' R'</solution>
+      <solution>R U' R' U2 R U R'</solution>
+      <solution>(y2) U2 L U L' U L U' L'</solution>
+      <solution>(y2) L U' L' U2 L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/18.png"/>
+    <setup>F' U' F U F' U F U2</setup>
+    <solutions>
+      <solution>d2 (y) R' U' R U' R' U R</solution>
+      <solution>(y') U2 R' U' R U' R' U R</solution>
+      <solution>(y2) d2 (y') R' U' R U' R' U R</solution>
+      <solution>d2 R' U' R U' R' U R</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/19.png"/>
+    <setup>R U R' U' R U2 R' U'</setup>
+    <solutions>
+      <solution>U R U2 R' U R U' R'</solution>
+      <solution>(y') d' L U2' L' U L U' L'</solution>
+      <solution>(y2) U L U2' L' U L U' L'</solution>
+      <solution>(y) d R U2' R' U R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/20.png"/>
+    <setup>F2 U' F U' F' U2 F2 U2</setup>
+    <solutions>
+      <solution>(y') U2 R2' U2 R U R' U R2</solution>
+      <solution>(y) U2 L2 U2 L U L' U L2</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="U">
+    <image src="images/21.png"/>
+    <setup>R U' R' U R U2 R'</setup>
+    <solutions>
+      <solution>R U2 R' U' R U R'</solution>
+      <solution>(y2) L U2' L' U' L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/22.png"/>
+    <setup>F' U' F U2 F' U' F U'</setup>
+    <solutions>
+      <solution>U' R U2' R' U R U R'</solution>
+      <solution>(y') U R' U R U2' R' U R</solution>
+      <solution>(y2) U' L U2' L' U L U L'</solution>
+      <solution>(y) U L' U L U2' L' U L </solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/23.png"/>
+    <setup>R U' R' U F' U F U'</setup>
+    <solutions>
+      <solution>d R' U' R d' R U R'</solution>
+      <solution>(y') U R' U' R d' R U R'</solution>
+      <solution>(y2) d' L' U' L d L U L'</solution>
+      <solution>(y) U L' U' L d L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/24.png"/>
+    <setup>F' U' F U</setup>
+    <solutions>
+      <solution>d' L' U L</solution>
+      <solution>(y') U' R' U R</solution>
+      <solution>(y2) d' R' U R</solution>
+      <solution>(y) U' L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/25.png"/>
+    <setup>R' U' R2 U' R2 U2 R</setup>
+    <solutions>
+      <solution>R' U2 R2' U R2' U R</solution>
+      <solution>(y') U R' U2 R d' R U R'</solution>
+      <solution>(y2) L' U2' L2 U L2' U L</solution>
+      <solution>(y) U L' U2 L d' L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/26.png"/>
+    <setup>F' U' F U2 F' U F U'</setup>
+    <solutions>
+      <solution>d R' U' R U2' R' U R</solution>
+      <solution>(y') U R' U' R U2' R' U R</solution>
+      <solution>(y2) d L' U' L U2' L' U L</solution>
+      <solution>(y) U L' U' L U2' L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/27.png"/>
+    <setup>R U' R' U' R U' R' U</setup>
+    <solutions>
+      <solution>U' R U R' U R U R'</solution>
+      <solution>(y') U R' U R d' R U R'</solution>
+      <solution>(y2) U' L U L' U L U L'</solution>
+      <solution>(y) U L' U L d' L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/28.png"/>
+    <setup>F' U' F U2 F' U2 F U'</setup>
+    <solutions>
+      <solution>d R' U2 R U2' R' U R</solution>
+      <solution>(y') U R' U2 R U2' R' U R</solution>
+      <solution>(y2) d L' U2' L U2' r' F r</solution>
+      <solution>(y) U L' U2' L U2' r' F r </solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/29.png"/>
+    <setup>R U' R'</setup>
+    <solutions>
+      <solution>R U R'</solution>
+      <solution>(y2) L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/30.png"/>
+    <setup>F' U F U2 R U R'</setup>
+    <solutions>
+      <solution>R U' R' U2 (y') R' U' R</solution>
+      <solution>(y') R' U2 R U' R' U' R U' R' U R</solution>
+      <solution>(y2) L U' L' U2 (y') L' U' L</solution>
+      <solution>(y) r' R U' R' F R U R' r</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="R">
+    <image src="images/31.png"/>
+    <setup>R U' R' U' R U R' U</setup>
+    <solutions>
+      <solution>U' R U' R' U R U R'</solution>
+      <solution>(y') d' R U' R' U R U R'</solution>
+      <solution>(y2) U' L U' L' U L U L'</solution>
+      <solution>(y) d' L U' L' U L U L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/32.png"/>
+    <setup>R U R' U2 R U R' U</setup>
+    <solutions>
+      <solution>U' R U' R' U2 R U' R'</solution>
+      <solution>(y') U R' U2 R U' R' U' R</solution>
+      <solution>(y2) U' L U' L' U2' L U' L'</solution>
+      <solution>(y) U L' U2 L U' L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/33.png"/>
+    <setup>F' U F U' R U' R' U</setup>
+    <solutions>
+      <solution>U' R U R' d R' U' R</solution>
+      <solution>(y') d' R U R' d R' U' R</solution>
+      <solution>(y2) U' L U L' d L' U' L</solution>
+      <solution>(y) d' L U L' d L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/34.png"/>
+    <setup>F' U F U F' U' F U'</setup>
+    <solutions>
+      <solution>d R' U R U' R' U' R</solution>
+      <solution>(y') U R' U R U' R' U' R</solution>
+      <solution>(y2) d L' U L U' L' U' L</solution>
+      <solution>(y) U L' U L U' L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/35.png"/>
+    <setup>R U' R' U2 F' U' F</setup>
+    <solutions>
+      <solution>l L' U L F' L' U' r R'</solution>
+      <solution>(y') R' U R U2' (y) R U R'</solution>
+      <solution>(y) L' U L U2' (y') R U R'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/36.png"/>
+    <setup>F' U F</setup>
+    <solutions>
+      <solution>(y') R' U' R</solution>
+      <solution>(y) L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/37.png"/>
+    <setup>R U R' U2 R U2 R' U</setup>
+    <solutions>
+      <solution>U' R U2' R' U2 R U' R'</solution>
+      <solution>(y') d' R U2' R' U2 R U' R'</solution>
+      <solution>(y2) U' L U2' L' U2 L U' L'</solution>
+      <solution>(y) d' L U2' L' U2 L U' L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/38.png"/>
+    <setup>F' U F U F' U F U'</setup>
+    <solutions>
+      <solution>d R' U' R U' R' U' R</solution>
+      <solution>(y') U R' U' R U' R' U' R</solution>
+      <solution>(y2) d L' U' L U' L' U' L</solution>
+      <solution>(y) U L' U' L U' L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/39.png"/>
+    <setup>R U R' U2 R U' R' U</setup>
+    <solutions>
+      <solution>U' R U R' U2 R U' R'</solution>
+      <solution>(y') d' R U R' U2 R U' R'</solution>
+      <solution>(y2) U L U L' U2 L U' L'</solution>
+      <solution>(y) d' L U L' U2 L U' L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/40.png"/>
+    <setup>F' U F U' R U2 R' U</setup>
+    <solutions>
+      <solution>U' R U2' R' d R' U' R</solution>
+      <solution>(y') R U2' R2' U' R2 U' R'</solution>
+      <solution>(y2) U' L U2' L' d L' U' L</solution>
+      <solution>(y) L U2' L2' U' L2 U' L'</solution>
+    </solutions>
+  </move>
+  <move phase="F" group="F">
+    <image src="images/41.png"/>
+    <setup>R U R' U'</setup>
+    <solutions>
+      <solution>U R U' R'</solution>
+      <solution>d L U' L'</solution>
+      <solution>U L U' L'</solution>
+      <solution>d R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll01.png"/>
+    <setup>F R' F' R U R2 B' R' B U' R'</setup>
+    <solutions>
+      <solution>R U (x') U' R U l' R' U' l' U l F'</solution>
+      <solution>R U2' R2' F R F' U2 R' F R F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll02.png"/>
+    <setup>R U2 R2 F R F' U2 R' F R F' U2</setup>
+    <solutions>
+      <solution>F R U R' U' F' f R U R' U' f'</solution>
+      <solution>(y) l U' R' U F2 R U' R' U2 F2 U'</solution>
+      <solution>(y2 x) U R' U' R B2' U R' U' R2 B2' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll03.png"/>
+    <setup>L' R B' L U2 L' B' R B' R2 L U</setup>
+    <solutions>
+      <solution>(y') r' R2 U R' U r U2 r' U R' r</solution>
+      <solution>L U2' (x) L U' L' U (y') L U L U' L F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll04.png"/>
+    <setup>R L' B R' U2 R B L' B L2 R' U'</setup>
+    <solutions>
+      <solution>(y) r' R U' r U2 r' U' R U' R2' r</solution>
+      <solution>R' U2 (x) R' U R U' (y) R' U' R' U R' F</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll05.png"/>
+    <setup>R' F' U2 F2 U R U' R' F' U2 R U2</setup>
+    <solutions>
+      <solution>(y2) r' R U R U R' U' r R2' F R F'</solution>
+      <solution>(y2) l' U2' L U L' U l2 U2' L' U' L U' l'</solution>
+      <solution>R U2' B' R' U' R U (y) R2 (z) R2 (z'x) R' U'</solution>
+      <solution>U2 R' U2 F R U R' U' F2 U2 F R </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll06.png"/>
+    <setup>F R' F' R U2 R d' R U' R' F'</setup>
+    <solutions>
+      <solution>(y2) l' U' L U' L' U2' l2 U L' U L U2' l'</solution>
+      <solution>F R U R' d R' U2 R' F R F'</solution>
+      <solution>F R U R' U (y') R' U2 l' U l F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll07.png"/>
+    <setup>F R' F' R U2 F R' F' R U' R U' R' U'</setup>
+    <solutions>
+      <solution>(y) R U R' U R' F R F' U2 R' F R F'</solution>
+      <solution>R' F R (y') R' U2 R' d R' U R B</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="I">
+    <image src="images/oll08.png"/>
+    <setup>B' R B U2 R' U' R U' R2 U2 R</setup>
+    <solutions>
+      <solution>R' U2 R2 U R' U R U2 (x') U' R' U</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="I">
+    <image src="images/oll09.png"/>
+    <setup>B' R' U' R d' R U R' U R</setup>
+    <solutions>
+      <solution>R' U' R U' R' d R' U R B</solution>
+      <solution>R U R' U R d' R U' R' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="I">
+    <image src="images/oll10.png"/>
+    <setup>F R U R' U' R U R' U' F' U</setup>
+    <solutions>
+      <solution>(y) f R U R' U' R U R' U' f'</solution>
+      <solution>(y') F U R U' R' U R U' R' F'</solution>
+      <solution>L d R U' R' U R U' R' F' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="I">
+    <image src="images/oll11.png"/>
+    <setup>L' B' L R' U' R U R' U' R U L' B L</setup>
+    <solutions>
+      <solution>L' B' L U' R' U R U' R' U R L' B L</solution>
+      <solution>F R U R' U' R (y') R' F R B' R' F' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll12.png"/>
+    <setup>F U R U' R' U R U' R' F'</setup>
+    <solutions>
+      <solution>F R U R' U' R U R' U' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll13.png"/>
+    <setup>F' U' L' U L U' L' U L F</setup>
+    <solutions>
+      <solution>F' L' U' L U L' U' L U F</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll14.png"/>
+    <setup>R B' R' B U2 R2 F R F' R</setup>
+    <solutions>
+      <solution>l' U R' U' R l (U2 x') U' R U l'</solution>
+      <solution>R' F R' F' R2 d2 (y') R' F R F' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll15.png"/>
+    <setup>B' R B R' y' d2 R2 B' R' B R'</setup>
+    <solutions>
+      <solution>l U' R U R' l' U2 F R' F' R</solution>
+      <solution>R B' R B R2' d2 (y) R B' R' B</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll16.png"/>
+    <setup>r' U2 R U R' U' R U R' U r</setup>
+    <solutions>
+      <solution>r' U' R U' R' U R U' R' U2 r</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="L">
+    <image src="images/oll17.png"/>
+    <setup>r U2 R' U' R U R' U' R U' r'</setup>
+    <solutions>
+      <solution>r U R' U R U' R' U R U2' r'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="F">
+    <image src="images/oll18.png"/>
+    <setup>l U' R' F' R U R' (yx) R' U R</setup>
+    <solutions>
+      <solution>R' U' R (y'x') R U' R' F R U l'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="F">
+    <image src="images/oll19.png"/>
+    <setup>l' U R B R' U' R (x'z) R U' R'</setup>
+    <solutions>
+      <solution>R U R' (xz') R' U R B' R' U' l</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="S">
+    <image src="images/oll20.png"/>
+    <setup>L F R' F R F2 L' U'</setup>
+    <solutions>
+      <solution>(y) r U2 R' U' R U' r'</solution>
+      <solution>(y2) r' R U' R U2 R' U' R U' R' r R'</solution>
+      <solution>(x') D R2 U' R' U R' D' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="S">
+    <image src="images/oll21.png"/>
+    <setup>R' F' L F' L' F2 R U'</setup>
+    <solutions>
+      <solution>(y) l' U2 L U L' U l</solution>
+      <solution>(y2) r R' U R' U2 R U R' U R r' R</solution>
+      <solution>B' R2' F R F' R B </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll22.png"/>
+    <setup>F R2 B' R' B R' F'</setup>
+    <solutions>
+      <solution>(y) r U R' U R U2 r'</solution>
+      <solution>(x') D R U' R U R2' D' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll23.png"/>
+    <setup>B' R2 F R F' R B</setup>
+    <solutions>
+      <solution>(y) l' U' L U' L' U2' l</solution>
+      <solution>B' R' F R' F' R2 B </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll24.png"/>
+    <setup>R' U R' U2 R U R' U R2 r' U2</setup>
+    <solutions>
+      <solution>(y2) r R2' U' R U' R' U2 R U' R r'</solution>
+      <solution>r' U' R U' l U' R' U l' U2' r</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll25.png"/>
+    <setup>r' R U' R U2 R' U' R U' R2 r U2</setup>
+    <solutions>
+      <solution>(y2) r' R2 U R' U R U2 R' U R' r</solution>
+      <solution>r U R' U l' U R U' l U2 r'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="K">
+    <image src="images/oll26.png"/>
+    <setup>F U F' R' F R U' R' F' R</setup>
+    <solutions>
+      <solution>R' F R U l' U' l (y') R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="K">
+    <image src="images/oll27.png"/>
+    <setup>F' U' F L F' L' U L F L' U2</setup>
+    <solutions>
+      <solution>(x') R U' R' F' R U R' (x y) R' U R</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="K">
+    <image src="images/oll28.png"/>
+    <setup>L F L' U R U' R' L F' L'</setup>
+    <solutions>
+      <solution>L F L' R U R' U' L F' L'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="K">
+    <image src="images/oll29.png"/>
+    <setup>L' B' L U' R' U R L' B L</setup>
+    <solutions>
+      <solution>L' B' L R' U' R U L' B L </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="X">
+    <image src="images/oll30.png"/>
+    <setup>r' R U R U R' U' r2 R2' U R U' r'</setup>
+    <solutions>
+      <solution>r' R U R U R' U' r2 R2' U R U' r'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="F">
+    <image src="images/oll31.png"/>
+    <setup>R' U2 l U' R U R' l' U2 R</setup>
+    <solutions>
+      <solution>R' U2 l R U' R' U l' U2' R </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="F">
+    <image src="images/oll32.png"/>
+    <setup>F R U' R' U R U R' F' U'</setup>
+    <solutions>
+      <solution>(y) F R U' R' U' R U R' F'</solution>
+      <solution>(y x) U R' U' l U R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="W">
+    <image src="images/oll33.png"/>
+    <setup>F R' F' R U R U R' U' R U' R' U'</setup>
+    <solutions>
+      <solution>(y) R U R' U R U' R' U' R' F R F'</solution>
+      <solution>F R U R2' U' (y') R' U R B R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="W">
+    <image src="images/oll34.png"/>
+    <setup>B' R B R' U' R' U' R U R' U R</setup>
+    <solutions>
+      <solution>R' U' R U' R' U R U l U' R' U</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="P">
+    <image src="images/oll35.png"/>
+    <setup>R B' R' U' R d L d' R'</setup>
+    <solutions>
+      <solution>(y x') U' R U l' U' R' U' R U R' U R</solution>
+      <solution>R d L' d' R' U R B R'</solution>
+      <solution>(y2) L d R' d' L' U L F L'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="P">
+    <image src="images/oll36.png"/>
+    <setup>R' F R U R' d' L' d R</setup>
+    <solutions>
+      <solution>(y' x) U R' U' l U R U R' U' R U' R'</solution>
+      <solution>R' d' L d R U' R' F' R</solution>
+      <solution>(y2) L' d' R d L U' L' B' L</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="P">
+    <image src="images/oll37.png"/>
+    <setup>F R U R' U' F' U'</setup>
+    <solutions>
+      <solution>(y) F U R U' R' F'</solution>
+      <solution>(y') f R U R' U' f'</solution>
+      <solution>R d L U' L' B'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="P">
+    <image src="images/oll38.png"/>
+    <setup>F' L' U' L U F U</setup>
+    <solutions>
+      <solution>(y') F' U' L' U L F</solution>
+      <solution>(y) f' L' U' L U f</solution>
+      <solution>L' d' R' U R B</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="A">
+    <image src="images/oll39.png"/>
+    <setup>B2 R' U R U' R' U' R2 B R' B</setup>
+    <solutions>
+      <solution>B' R B' R2' U R U R' U' R B2 </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="A">
+    <image src="images/oll40.png"/>
+    <setup>l U' l' U' R2 U R' B R U' R2</setup>
+    <solutions>
+      <solution>R2' U R' B' R U' R2' U l U l'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="A">
+    <image src="images/oll41.png"/>
+    <setup>F U R U R' y' U' R' U2 R U R' U2</setup>
+    <solutions>
+      <solution>(y') R U2' R' U' R U' R2 (y) L' U' L U F</solution>
+      <solution>(y2) R U' R' U2 R U (y) R U' R' U' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="A">
+    <image src="images/oll42.png"/>
+    <setup>B' U' R' U' R y U R U2 R' U' R</setup>
+    <solutions>
+      <solution>(y') R' U2 R U R' U R2 (y) R U R' U' F'</solution>
+      <solution>R' U R U2' R' U' (y') R' U R U B </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll43.png"/>
+    <setup>R' U' F U R U' R' F' R</setup>
+    <solutions>
+      <solution>R' F R U R' U' F' U R </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="B">
+    <image src="images/oll44.png"/>
+    <setup>L U F' U' L' U L F L' U2</setup>
+    <solutions>
+      <solution>(y2) L F' L' U' L U F U' L'</solution>
+      <solution>R B' R' U' R U (y) R U' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="C">
+    <image src="images/oll45.png"/>
+    <setup>R U B' R B R' U' R'</setup>
+    <solutions>
+      <solution>R' U' l' U l F' U R</solution>
+      <solution>R U (x') R U' R' U (x) U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="C">
+    <image src="images/oll46.png"/>
+    <setup>B' F R' F' R B U R U' R'</setup>
+    <solutions>
+      <solution>R U R' U' (x) D' R' U R E' </solution>
+    </solutions>
+  </move>
+  <move phase="O" group="T">
+    <image src="images/oll47.png"/>
+    <setup>F U R U' R' F'</setup>
+    <solutions>
+      <solution>F R U R' U' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="T">
+    <image src="images/oll48.png"/>
+    <setup>F R U' R' U' R U R' F'</setup>
+    <solutions>
+      <solution>R U R' U' R' F R F'</solution>
+      <solution>F R U' R' U R U R' F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll49.png"/>
+    <setup>R U2 R2 U' R2 U' R2 U2 R</setup>
+    <solutions>
+      <solution>R U2' R2' U' R2 U' R2' U2 R</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll50.png"/>
+    <setup>R U R' U R U' R' U R U2' R'</setup>
+    <solutions>
+      <solution>(y) R U2 R' U' R U R' U' R U' R'</solution>
+      <solution>R U R' U R U' R' U R U2' R'</solution>
+      <solution>(y) F R U R' U' R U R' U' R U R' U'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll51.png"/>
+    <setup>R U2 R' U' R U' R'</setup>
+    <solutions>
+      <solution>R U R' U R U2' R'</solution>
+      <solution>(y') R' U2 R U R' U R</solution>
+      <solution>(y2) L U L' U L' U2' L'</solution>
+      <solution>(y) L' U2' L U L' U L</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll52.png"/>
+    <setup>R U R' U R U2 R'</setup>
+    <solutions>
+      <solution>R U2 R' U' R U' R'</solution>
+      <solution>(y') R' U' R U' R' U2 R</solution>
+      <solution>(y2) L U2' L' U' L U' L'</solution>
+      <solution>(y) L' U' L U' L' U2' L</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="H">
+    <image src="images/oll53.png"/>
+    <setup>F R' F' R L' U R U' R' L</setup>
+    <solutions>
+      <solution>R U R' U' r R' U R U' r'</solution>
+      <solution>L' R U R' U' L R' F R F'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="H">
+    <image src="images/oll54.png"/>
+    <setup>R U R' U' r R' U R U' r'(y2)</setup>
+    <solutions>
+      <solution>r R' U R r' U2 r R' U R r'</solution>
+      <solution>F R' F' R L' U R U' R' L</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll55.png"/>
+    <setup>R U2 R D R' U2 R D' R2</setup>
+    <solutions>
+      <solution>R2' D R' U2 R D' R' U2 R'</solution>
+      <solution>(y2) R' U' R U' R' U2 R2 U R' U R U2' R'</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll56.png"/>
+    <setup>R' F' L' F R F' L F</setup>
+    <solutions>
+      <solution>l' U' L U R U' r' F</solution>
+      <solution>(y') R U2 R' U' R U' R2 U2 R U R' U R</solution>
+    </solutions>
+  </move>
+  <move phase="O" group="+">
+    <image src="images/oll57.png"/>
+    <setup>R' F' L F R F' L' F</setup>
+    <solutions>
+      <solution>l' U' L' U R U' L U (x')</solution>
+      <solution>(y2) R' F R B' R' F' R B</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="E">
+    <image src="images/pllcase01.png"/>
+    <setup>R U' R U R U R U' R' U' R2</setup>
+    <solutions>
+      <solution>R2' U R U R' U' R' U' R' U R'</solution>
+      <solution>(y) L2' d R' r d2 R' r d L2</solution>
+      <solution>(y') R2' d r' R d2 r' R d R2</solution>
+      <solution>(y2) R' U R' U' R' U' R' U R U R2</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="E">
+    <image src="images/pllcase02.png"/>
+    <setup>R' U R' U' R' U' R' U R U R2</setup>
+    <solutions>
+      <solution>R2 U' R' U' R U R U R U' R</solution>
+      <solution>(y2) R U' R U R U R U' R' U' R2</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="C">
+    <image src="images/pllcase03.png"/>
+    <setup>R2 B2 R F R' B2 R F' R</setup>
+    <solutions>
+      <solution>(x) R' U R' D2 R U' R' D2 l2 (x)</solution>
+      <solution>(y' x) L2 D2 L' U' L D2 L' U L'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="C">
+    <image src="images/pllcase04.png"/>
+    <setup>R' F R' B2 R F' R' B2 R2</setup>
+    <solutions>
+      <solution>(x) R2 D2 R U R' D2 R U' R (x')</solution>
+      <solution>(y' x) L U' L D2 L' U L D2 L2</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="E">
+    <image src="images/pllcase05.png"/>
+    <setup>U2 R' U' R2 U R U R' U' R U R U' R U' R'</setup>
+    <solutions>
+      <solution>(y) R' U' R U' R U R U' R' U R U R2 U' R' U2</solution>
+      <solution>(x') R U' R' U D R' D U' R' U R D2' F (x)</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="O">
+    <image src="images/pllcase06.png"/>
+    <setup>U R2 F R F' R' U' F' U F R2 U R' U' R</setup>
+    <solutions>
+      <solution>(y2) R' U2 R d' R' F R2 U' R' U R' F R U' F</solution>
+      <solution>R' U R U' R2 F' U' F U (x) R U R' U' R2 B' (x')</solution>
+      <solution>R' U R U' R2 (y') R' U' R U (y x) R U R' U' R2 B'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="O">
+    <image src="images/pllcase07.png"/>
+    <setup>F R U' R' U R U R2 F' R U R U' R'</setup>
+    <solutions>
+      <solution>R U R' U' R' F R2 U' R' U' R U R' F'</solution>
+      <solution>F R U' R' U R U R2 F' R U R U' R'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="R">
+    <image src="images/pllcase08.png"/>
+    <setup>U' R U' B L' B' R' B L B' U' R U2 R'</setup>
+    <solutions>
+      <solution>R U2' R' U2 R B' R' U' R U l U l' R' U</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="R">
+    <image src="images/pllcase09.png"/>
+    <setup>U R2 F R U R U' R' F' R U2 R' U2 R</setup>
+    <solutions>
+      <solution>R' U2 R U2 R' F R U R' U' R' F' R2 U'</solution>
+      <solution>R' U2 R U' (y') R' F R B' R' F' R (z x') R' U R'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="J">
+    <image src="images/pllcase10.png"/>
+    <setup>R U2 R' U' R U2 L' U R' U' L</setup>
+    <solutions>
+      <solution>R U R' F' R U R' U' R' F R2 U' R' U'</solution>
+      <solution>(y2) F2' R U R' (y) r2 (y') R U' R U R2'</solution>
+      <solution>L' U R U' L U2 R' U R U2' R'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="J">
+    <image src="images/pllcase11.png"/>
+    <setup>R2 D R D' R F2 L' U L F2</setup>
+    <solutions>
+      <solution>F2' L' U' r U2' l' U R' U' R2 (x2)</solution>
+      <solution>(y2) R U' L' U R' U2 L U' L' U2' L</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="N">
+    <image src="images/pllcase12.png"/>
+    <setup>U L U' R U2 L' U L R' U' R U2 L' U R'</setup>
+    <solutions>
+      <solution>R U' R' U l U F U' l' U' R U R' d R' U' R</solution>
+      <solution>R U' L d2 L' U L R' U' R U2 r' F l' U' (y2)</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="N">
+    <image src="images/pllcase13.png"/>
+    <setup>U R' U L' U2 R U' R' L U L' U2 R U' L</setup>
+    <solutions>
+      <solution>R' U R U' R' F' U' F R U R' U' R d' R U R'</solution>
+      <solution>L' U R' U2' L U' L' R U R' U2' L U' R U'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="O">
+    <image src="images/pllcase14.png"/>
+    <setup>R' B' R' B R B2 D B D' B U R U' R</setup>
+    <solutions>
+      <solution>R' U R' d' R' F' R2 U' R' U R' F R F</solution>
+      <solution>R' U R' U' (x2 y') R' U R' U' l R U' R' U R U (x' y')</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="O">
+    <image src="images/pllcase15.png"/>
+    <setup>F R' F' R U R U' R' F R U' R' U R U R' F'</setup>
+    <solutions>
+      <solution>F R U' R' U' R U R' F' R U R' U' l' U R U' (x')</solution>
+      <solution>F R U' R' F D R' (y x) R' U' R (z) R2 (y) L' d2</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="C">
+    <image src="images/pllcase16.png"/>
+    <setup>L' B L F' L' B' L F2 R B' R' F' R B R'</setup>
+    <solutions>
+      <solution>R2' U R' d' R U R' U' R U R' U' R U R' F U' F2</solution>
+      <solution>(y x) U R' U' L U R U' r2 U' R U L U' R' U (x y')</solution>
+      <solution>(x') R U' R' D R U R' u2 R' U R D R' U' R (x' y2)</solution>
+      <solution>(x') R U' R' D R U R' D2 L' U L D L' U' L</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="E">
+    <image src="images/pllcase17.png"/>
+    <setup>L2 R2 D' L2 R2 U2 L2 R2 D' L2 R2</setup>
+    <solutions>
+      <solution>r2 R2' U r2 R2' U2 r2 R2' U r2 R2'</solution>
+      <solution>R2 U2 R2 U2 R2 U R2 U2 R2 U2 R2 U'</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="G">
+    <image src="images/pllcase18.png"/>
+    <setup>F' U' F R2 D B' U B U' B D' R2</setup>
+    <solutions>
+      <solution>R2' u R' U R' U' R u' R2 (y') R' U R (y)</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="G">
+    <image src="images/pllcase19.png"/>
+    <setup>B U B' R2 D' F U' F' U F' D R2</setup>
+    <solutions>
+      <solution>R2 u' R U' R U R' u R2' (y) R U' R' (y')</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="G">
+    <image src="images/pllcase20.png"/>
+    <setup>F2 D' L U' L U L' D F2 R U' R'</setup>
+    <solutions>
+      <solution>R U R' (y') R2 u' R U' R' U R' u R2 (y)</solution>
+    </solutions>
+  </move>
+  <move phase="P" group="G">
+    <image src="images/pllcase21.png"/>
+    <setup>F2 D R' U R' U' R D' F2 L' U L</setup>
+    <solutions>
+      <solution>L' U' L (y') R2' u R' U R U' R u' R2 (y)</solution>
+    </solutions>
+  </move>
+</moves>

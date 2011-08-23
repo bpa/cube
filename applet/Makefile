@@ -1,6 +1,7 @@
-OPTS=`pkg-config --cflags --libs libpanelapplet-2.0`
+OPTS=`pkg-config --cflags --libs libpanelappletmm-2.6`
 
-cube: cube.c
+cube: cube.c parser.c
+	gcc $(OPTS) -o parser parser.c
 	gcc $(OPTS) -o cube cube.c
 
 install: cube

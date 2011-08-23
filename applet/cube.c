@@ -1,11 +1,11 @@
 #include <string.h>
-
 #include <panel-applet.h>
 #include <gtk/gtklabel.h>
 
+#include "cube.h"
+
 GtkWidget *label = NULL;
 GtkWidget *icon = NULL;
-GdkPixmap *buff = NULL;
 
 static gboolean on_move_press(GtkWidget *event_box, GdkEventButton *event, gpointer data) {
     gtk_label_set_text(GTK_LABEL(label), (long)data ? "next" : "prev");
@@ -20,6 +20,7 @@ GtkWidget *button(const gchar *stock_image, const GCallback func, gpointer forwa
     return event_box;
 }
 
+/*
 void draw_cube(Case *c) {
     gdk_draw_rectangle (buff,
             widget->style->white_gc,
@@ -30,45 +31,39 @@ void draw_cube(Case *c) {
 
     printf("New size: %i x %i\n", widget->allocation.width, widget->allocation.height);
 }
+*/
 
 static gboolean configure_event_callback (GtkWidget *widget, GdkEventConfigure *event, gpointer data) {
     if ( widget->allocation.width != widget->allocation.height ) {
         gtk_widget_set_size_request(widget, widget->allocation.height, widget->allocation.height);
     }
-    if (buff != NULL) {
-        g_object_unref(buff);
-    }
-    buff = gdk_pixmap_new(widget->window, widget->allocation.width, widget->allocation.height, -1);
+    //if (buff != NULL) {
+        //g_object_unref(buff);
+    //}
+    //buff = gdk_pixmap_new(widget->window, widget->allocation.width, widget->allocation.height, -1);
     return TRUE;
-}
-
-static gboolean expose_event_callback (GtkWidget *widget, GdkEventExpose *event, gpointer data) {
-    printf("Exposed\n");
-    gdk_draw_pixmap(widget->window,
-            widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
-            buff,
-            event->area.x, event->area.y,
-            event->area.x, event->area.y,
-            event->area.width, event->area.height);
-
-    return FALSE;
 }
 
 static gboolean cube_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data) {
 	GtkWidget *hbox;
+	GdkPixbuf *img, *scaled;
+	GError *err = NULL;
+	gint size;
 
 	if (strcmp (iid, "OAFIID:CubeApplet") != 0)
 		return FALSE;
 
-	hbox = gtk_hbox_new (FALSE, 3);
-    icon = gtk_drawing_area_new();
+	size = panel_applet_get_size(applet);
+
+	img = gdk_pixbuf_new_from_file("/home/ARBFUND/bruce/projects/cube/gadget/images/2.png", &err);
+	scaled = gdk_pixbuf_scale_simple(img, size, size, GDK_INTERP_BILINEAR);
+    icon = gtk_image_new_from_pixbuf(scaled);
+	
+	gtk_widget_set_size_request(icon, size, size);
     g_signal_connect (G_OBJECT (icon), "configure_event", G_CALLBACK (configure_event_callback), NULL);
-    g_signal_connect (G_OBJECT (icon), "expose_event", G_CALLBACK (expose_event_callback), NULL);
-	label = gtk_label_new ("Cube goes here");
-    gtk_box_pack_start(GTK_BOX(hbox), button(GTK_STOCK_GO_BACK, G_CALLBACK(on_move_press), (gpointer)0), FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(hbox), label, FALSE, FALSE, 0);
+
+	hbox = gtk_hbox_new (FALSE, 3);
     gtk_box_pack_start(GTK_BOX(hbox), icon, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(hbox), button(GTK_STOCK_GO_FORWARD, G_CALLBACK(on_move_press), (gpointer)1), FALSE, FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (applet), GTK_WIDGET(hbox));
 
 	gtk_widget_show_all (GTK_WIDGET (applet));
