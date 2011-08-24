@@ -4,75 +4,118 @@
 
 #include "cube.h"
 
-GtkWidget *label = NULL;
+GList *moves;
+GList *current;
 GtkWidget *icon = NULL;
+GdkPixbuf *image;
+gint size;
 
-static gboolean on_move_press(GtkWidget *event_box, GdkEventButton *event, gpointer data) {
-    gtk_label_set_text(GTK_LABEL(label), (long)data ? "next" : "prev");
-    return TRUE;
-}
-
-GtkWidget *button(const gchar *stock_image, const GCallback func, gpointer forward) {
-    GtkWidget *image = gtk_image_new_from_stock(stock_image, GTK_ICON_SIZE_SMALL_TOOLBAR);
-    GtkWidget *event_box = gtk_event_box_new();
-    gtk_container_add(GTK_CONTAINER(event_box), image);
-    g_signal_connect (G_OBJECT (event_box), "button_press_event", func, forward);
-    return event_box;
-}
+static const char Context_menu_xml [] =
+   "<popup name=\"button3\">\n"
+   "   <menuitem name=\"Properties Item\" "
+   "             verb=\"ExampleProperties\" "
+   "           _label=\"_Preferences...\"\n"
+   "          pixtype=\"stock\" "
+   "          pixname=\"gtk-properties\"/>\n"
+   "   <menuitem name=\"About Item\" "
+   "             verb=\"ExampleAbout\" "
+   "           _label=\"_About...\"\n"
+   "          pixtype=\"stock\" "
+   "          pixname=\"gnome-stock-about\"/>\n"
+   "</popup>\n";
 
 /*
-void draw_cube(Case *c) {
-    gdk_draw_rectangle (buff,
-            widget->style->white_gc,
-            TRUE,
-            0, 0,
-            widget->allocation.width,
-            widget->allocation.height);
+static void display_properties_dialog (BonoboUIComponent *uic, struct MultiRes *applet) {
+}
 
-    printf("New size: %i x %i\n", widget->allocation.width, widget->allocation.height);
+static void display_about_dialog (BonoboUIComponent *uic, struct MultiRes *applet) {
 }
 */
 
-static gboolean configure_event_callback (GtkWidget *widget, GdkEventConfigure *event, gpointer data) {
-    if ( widget->allocation.width != widget->allocation.height ) {
-        gtk_widget_set_size_request(widget, widget->allocation.height, widget->allocation.height);
-    }
-    //if (buff != NULL) {
-        //g_object_unref(buff);
-    //}
-    //buff = gdk_pixmap_new(widget->window, widget->allocation.width, widget->allocation.height, -1);
-    return TRUE;
+static const BonoboUIVerb myexample_menu_verbs [] = {
+        //BONOBO_UI_VERB ("ExampleProperties", display_properties_dialog),
+        //BONOBO_UI_VERB ("ExampleAbout", display_about_dialog),
+        BONOBO_UI_VERB_END
+};
+
+void update_icon() {
+	GdkPixbuf *scaled;
+	GError *err = NULL;
+	move_print(current->data, NULL);
+	GString *path = g_string_new("/home/ARBFUND/bruce/projects/cube/gadget/");
+	g_string_append(path, ((struct move*)current->data)->image);
+	image = gdk_pixbuf_new_from_file(path->str, &err);
+	g_string_free(path, TRUE);
+	scaled = gdk_pixbuf_scale_simple(image, size, size, GDK_INTERP_BILINEAR);
+	gtk_image_set_from_pixbuf((GtkImage*)icon, scaled);
 }
 
+void cmd_next() {
+	current = g_list_next(current);
+	if (current == NULL) {
+		current = g_list_first(moves);
+	}
+	update_icon();
+}
+
+static gboolean on_left_click(GtkWidget *event_box, GdkEventButton *event, gpointer data) {
+	printf("click\n");
+	cmd_next();
+	return FALSE;
+}
+
+GtkWidget *button(const gchar *stock_image, const GCallback func, gpointer forward) {
+	GtkWidget *image = gtk_image_new_from_stock(stock_image, GTK_ICON_SIZE_SMALL_TOOLBAR);
+	GtkWidget *event_box = gtk_event_box_new();
+	gtk_container_add(GTK_CONTAINER(event_box), image);
+	g_signal_connect (G_OBJECT (event_box), "button_press_event", func, forward);
+	return event_box;
+}
+
+//static gboolean configure_event_callback (GtkWidget *widget, GdkEventConfigure *event, gpointer data) {
+//	if ( widget->allocation.width != widget->allocation.height ) {
+//		gtk_widget_set_size_request(widget, widget->allocation.height, widget->allocation.height);
+//	}
+	//if (buff != NULL) {
+	//g_object_unref(buff);
+	//}
+	//buff = gdk_pixmap_new(widget->window, widget->allocation.width, widget->allocation.height, -1);
+	//return TRUE;
+//}
+
 static gboolean cube_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data) {
-	GtkWidget *hbox;
-	GdkPixbuf *img, *scaled;
-	GError *err = NULL;
-	gint size;
+	GtkWidget *event_box;
 
 	if (strcmp (iid, "OAFIID:CubeApplet") != 0)
 		return FALSE;
 
+	panel_applet_setup_menu (PANEL_APPLET (applet),
+                         Context_menu_xml,
+                         myexample_menu_verbs,
+                         NULL);
 	size = panel_applet_get_size(applet);
-
-	img = gdk_pixbuf_new_from_file("/home/ARBFUND/bruce/projects/cube/gadget/images/2.png", &err);
-	scaled = gdk_pixbuf_scale_simple(img, size, size, GDK_INTERP_BILINEAR);
-    icon = gtk_image_new_from_pixbuf(scaled);
-	
+	icon = gtk_image_new();
+	event_box = gtk_event_box_new();
+	gtk_event_box_set_visible_window((GtkEventBox*)event_box, FALSE);
 	gtk_widget_set_size_request(icon, size, size);
-    g_signal_connect (G_OBJECT (icon), "configure_event", G_CALLBACK (configure_event_callback), NULL);
+	//gtk_widget_set_events (event_box, GDK_BUTTON_PRESS_MASK);
+	//g_signal_connect (G_OBJECT (icon), "configure_event", G_CALLBACK (configure_event_callback), NULL);
+	g_signal_connect (G_OBJECT (event_box), "button_press_event", G_CALLBACK (on_left_click), NULL);
 
-	hbox = gtk_hbox_new (FALSE, 3);
-    gtk_box_pack_start(GTK_BOX(hbox), icon, FALSE, FALSE, 0);
-	gtk_container_add (GTK_CONTAINER (applet), GTK_WIDGET(hbox));
+	gtk_container_add (GTK_CONTAINER (event_box), GTK_WIDGET(icon));
+	gtk_container_add (GTK_CONTAINER (applet), GTK_WIDGET(event_box));
+
+	moves = parse_moves();
+	current = g_list_first(moves);
+	update_icon();
 
 	gtk_widget_show_all (GTK_WIDGET (applet));
 	return TRUE;
 }
 
 PANEL_APPLET_BONOBO_FACTORY ("OAFIID:CubeApplet_Factory",
-                             PANEL_TYPE_APPLET,
-                             "Cube Applet",
-                             "0",
-                             cube_applet_fill,
-                             NULL);
+		PANEL_TYPE_APPLET,
+		"Cube Applet",
+		"0",
+		cube_applet_fill,
+		NULL);

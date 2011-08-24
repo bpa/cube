@@ -11,4 +11,7 @@ struct move {
 	GSList *solutions;
 };
 
+GList *parse_moves();
+void move_print(gpointer data, gpointer user_data);
+
 #endif

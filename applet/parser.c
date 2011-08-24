@@ -6,10 +6,23 @@
 struct parser_state {
 	GList *moves;
 	struct move *current;
-	void (*text_action)(struct move *, const gchar *text, gsize text_len);
+	gchar **field;
+	void (*text_action)(struct parser_state*, const gchar *text, gsize len);
 };
 
-void ignore_text(struct move *current, const gchar *text, gsize text_len) { }
+void ignore(struct parser_state *state, const gchar *text, gsize text_len) { }
+
+void set(struct parser_state *state, const gchar *text, gsize text_len) {
+	*state->field = g_strndup(text, text_len);
+}
+
+void append_solution(struct parser_state *state, const gchar *text, gsize text_len) {
+	gchar *solution = g_strndup(text, text_len);
+	state->current->solutions = g_slist_append(state->current->solutions, solution);
+}
+
+void push(struct parser_state *state, const gchar *text, gsize text_len) {
+}
 
 void start_element (GMarkupParseContext *context,
     const gchar         *element_name,
@@ -24,6 +37,8 @@ void start_element (GMarkupParseContext *context,
 
   if (g_strcmp0(element_name, "move") == 0) {
 	state->current = g_new(struct move, 1);
+	state->current->setup = NULL;
+	state->current->solutions = NULL;
     state->moves = g_list_append(state->moves, state->current);
 	  while (*name_cursor) {
 		if (g_strcmp0(*name_cursor, "phase") == 0)
@@ -42,6 +57,13 @@ void start_element (GMarkupParseContext *context,
 		value_cursor++;
 	  }
   }
+  else if (g_strcmp0(element_name, "setup") == 0) {
+		state->field = &state->current->setup;
+		state->text_action = set;
+  }
+  else if (g_strcmp0(element_name, "solution") == 0) {
+		state->text_action = append_solution;
+  }
 }
 
 void text_element(GMarkupParseContext *context,
@@ -51,7 +73,7 @@ void text_element(GMarkupParseContext *context,
     GError             **error)
 {
 	struct parser_state *state = user_data;
-	state->text_action(state->current, text, text_len);
+	state->text_action(state, text, text_len);
 }
 
 void end_element (GMarkupParseContext *context,
@@ -59,7 +81,7 @@ void end_element (GMarkupParseContext *context,
     gpointer             user_data,
     GError             **error)
 {
-	((struct parser_state *)user_data)->text_action = &ignore_text;
+	((struct parser_state *)user_data)->text_action = ignore;
 }
 
 static GMarkupParser parser = {
@@ -70,20 +92,31 @@ static GMarkupParser parser = {
   NULL
 };
 
+void solution_print(gpointer data, gpointer user_data) {
+	if (data != NULL) {
+		printf("  %s\n", (gchar*)data);
+	}
+	else {
+		printf("  NULL\n");
+	}
+}
+
 void move_print(gpointer data, gpointer user_data) {
 	if (data != NULL) {
 		struct move *m = data;
-		printf("Move: %s %s %s\n", m->phase, m->group, m->image);
+		printf("Move: %s %s\nImage: %s\n", m->phase, m->group, m->image);
+		printf("Setup: %s\nSolutions:\n", m->setup);
+		g_slist_foreach(m->solutions, solution_print, NULL);
 	}
 	else {
 		printf("NULL;");
 	}
 }
 
-int main() {
+GList *parse_moves() {
 	struct parser_state state;
-	state.moves = g_list_alloc();
-	state.text_action = &ignore_text;
+	state.moves = NULL;
+	state.text_action = &ignore;
 
     char *text;
     gsize length;
@@ -93,8 +126,9 @@ int main() {
       (gpointer*)&state,
 	  NULL);
 
-  if (g_file_get_contents ("../data/cfop.xml", &text, &length, NULL) == FALSE) {
+  if (g_file_get_contents ("/home/ARBFUND/bruce/projects/cube/data/cfop.xml", &text, &length, NULL) == FALSE) {
     printf("Couldn't load XML\n");
+
     exit(255);
   }
 
@@ -105,7 +139,6 @@ int main() {
 
   g_free(text);
   g_markup_parse_context_free (context);
-  g_list_foreach(state.moves, move_print, NULL);
-  return 0;
+  return state.moves;
 }
 
