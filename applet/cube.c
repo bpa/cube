@@ -50,6 +50,14 @@ void update_icon() {
 	gtk_image_set_from_pixbuf((GtkImage*)icon, scaled);
 }
 
+void cmd_prev() {
+	current = g_list_previous(current);
+	if (current == NULL) {
+		current = g_list_last(moves);
+	}
+	update_icon();
+}
+
 void cmd_next() {
 	current = g_list_next(current);
 	if (current == NULL) {
@@ -58,10 +66,18 @@ void cmd_next() {
 	update_icon();
 }
 
-static gboolean on_left_click(GtkWidget *event_box, GdkEventButton *event, gpointer data) {
-	printf("click\n");
-	cmd_next();
-	return FALSE;
+static gboolean on_icon_click(GtkWidget *event_box, GdkEventButton *event, gpointer data) {
+	if (event->button == 1) {
+		cmd_next();
+		return TRUE;
+	}
+	else if (event->button == 2) {
+		cmd_prev();
+		return TRUE;
+	}
+	else {
+		return FALSE;
+	}
 }
 
 GtkWidget *button(const gchar *stock_image, const GCallback func, gpointer forward) {
@@ -100,7 +116,7 @@ static gboolean cube_applet_fill (PanelApplet *applet, const gchar *iid, gpointe
 	gtk_widget_set_size_request(icon, size, size);
 	//gtk_widget_set_events (event_box, GDK_BUTTON_PRESS_MASK);
 	//g_signal_connect (G_OBJECT (icon), "configure_event", G_CALLBACK (configure_event_callback), NULL);
-	g_signal_connect (G_OBJECT (event_box), "button_press_event", G_CALLBACK (on_left_click), NULL);
+	g_signal_connect (G_OBJECT (event_box), "button_press_event", G_CALLBACK (on_icon_click), NULL);
 
 	gtk_container_add (GTK_CONTAINER (event_box), GTK_WIDGET(icon));
 	gtk_container_add (GTK_CONTAINER (applet), GTK_WIDGET(event_box));
