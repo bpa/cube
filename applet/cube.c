@@ -41,13 +41,17 @@ static const BonoboUIVerb myexample_menu_verbs [] = {
 void update_icon() {
 	GdkPixbuf *scaled;
 	GError *err = NULL;
-	move_print(current->data, NULL);
+	//move_print(current->data, NULL);
 	GString *path = g_string_new("/home/ARBFUND/bruce/projects/cube/gadget/");
 	g_string_append(path, ((struct move*)current->data)->image);
 	image = gdk_pixbuf_new_from_file(path->str, &err);
 	g_string_free(path, TRUE);
 	scaled = gdk_pixbuf_scale_simple(image, size, size, GDK_INTERP_BILINEAR);
 	gtk_image_set_from_pixbuf((GtkImage*)icon, scaled);
+
+	GString *tooltip = g_string_new_from_move((struct move*)current->data);
+	gtk_widget_set_tooltip_markup(icon, tooltip->str);
+	g_string_free(tooltip, TRUE);
 }
 
 void cmd_prev() {

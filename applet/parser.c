@@ -1,7 +1,6 @@
 #include "cube.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 struct parser_state {
 	GList *moves;
@@ -91,27 +90,6 @@ static GMarkupParser parser = {
   NULL,
   NULL
 };
-
-void solution_print(gpointer data, gpointer user_data) {
-	if (data != NULL) {
-		printf("  %s\n", (gchar*)data);
-	}
-	else {
-		printf("  NULL\n");
-	}
-}
-
-void move_print(gpointer data, gpointer user_data) {
-	if (data != NULL) {
-		struct move *m = data;
-		printf("Move: %s %s\nImage: %s\n", m->phase, m->group, m->image);
-		printf("Setup: %s\nSolutions:\n", m->setup);
-		g_slist_foreach(m->solutions, solution_print, NULL);
-	}
-	else {
-		printf("NULL;");
-	}
-}
 
 GList *parse_moves() {
 	struct parser_state state;

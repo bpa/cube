@@ -13,5 +13,6 @@ struct move {
 
 GList *parse_moves();
 void move_print(gpointer data, gpointer user_data);
+GString *g_string_new_from_move(struct move *mv);
 
 #endif
