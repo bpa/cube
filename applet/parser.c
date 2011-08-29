@@ -104,7 +104,7 @@ GList *parse_moves() {
       (gpointer*)&state,
 	  NULL);
 
-  if (g_file_get_contents ("/home/ARBFUND/bruce/projects/cube/data/cfop.xml", &text, &length, NULL) == FALSE) {
+  if (g_file_get_contents ("/usr/share/gnome-applets/cube/data/cfop.xml", &text, &length, NULL) == FALSE) {
     printf("Couldn't load XML\n");
 
     exit(255);

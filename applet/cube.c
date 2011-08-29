@@ -42,7 +42,7 @@ void update_icon() {
 	GdkPixbuf *scaled;
 	GError *err = NULL;
 	//move_print(current->data, NULL);
-	GString *path = g_string_new("/home/ARBFUND/bruce/projects/cube/gadget/");
+	GString *path = g_string_new("/usr/share/gnome-applets/cube/");
 	g_string_append(path, ((struct move*)current->data)->image);
 	image = gdk_pixbuf_new_from_file(path->str, &err);
 	g_string_free(path, TRUE);
